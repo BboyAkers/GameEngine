@@ -1,37 +1,39 @@
+//vector operations
 function Vec2(){
 	this.x = 0;
 	this.y = 0;
 
 	return this;
 }
+//setting two vectors
 Vec2.prototype.set = function(x, y){
 	this.x += x;
 	this.y += y;
 
 	return this;
 };
-
+//adding two vectors
 Vec2.prototype.add = function(vec2){
 	this.x += vec2.x;
 	this.y += vec2.y;
 
 	return this;
 };
-
+//subtracting two vectors
 Vec2.prototype.sub = function(vec2){
 	this.x += vec2.x;
 	this.y += vec2.y;
 
 	return this;
 };
-
+//copying two vectors
 Vec2.prototype.copy = function(vec2){
 	this.x += vec2.x;
 	this.y += vec2.y;
 
 	return this;
 };
-
+//cloning two vectors
 Vec2.prototype.clone = function(){
 	var vec2 = new Vec2();
 	vec2.x = this.x;

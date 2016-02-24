@@ -7,16 +7,16 @@ function Entity(){
 	kernel.children.push(this);
 	return this;
 }
-
+//Initiates the variables within Entity
 Entity.prototype.init = function() { 
 	return this; 
 };
-
+//Updates the variables within Entity
 Entity.prototype.update = function() { 
 
 	return this; 
 };
-
+// places the image relative to the origin.
 Entity.prototype.draw = function() { 
 	if (this.image === null){
 		return false;

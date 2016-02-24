@@ -13,7 +13,7 @@ Kernel.prototype.init = function(){
 
 	return this;
 };
-
+//frame rate update
 function anim () {
 	window.requestAnimationFrame(anim);
 	kernel.update();
