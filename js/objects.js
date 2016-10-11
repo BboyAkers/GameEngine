@@ -1,4 +1,4 @@
-function Entity(){
+	function Entity(){
 	this.position = new Vec2();
 	this.velocity = new Vec2();
 	this.friction = 0.9;

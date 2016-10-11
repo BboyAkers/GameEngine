@@ -21,9 +21,9 @@ ob_player.image = sp_null;
 ob_player.position.set (64, 64);
 
 //placing the grass
-var ob_grass = new Entity();
-ob_grass.image = sp_grass;
-ob_grass.position.set(256,256);
+// var ob_grass = new Entity();
+// ob_grass.image = sp_grass;
+// ob_grass.position.set(256,256);
 
 ob_player.update = function(){
 	
@@ -44,11 +44,24 @@ ob_player.update = function(){
 };
 
 for (var i = 0; i < 32; i++){
+
 	var ob_tree = new Entity();
 	ob_tree.image = sp_tree;
 	ob_tree.position.set(96 * (i % 8), 96 * ((i/8) | 0));
 
 	}
+
+	var ob_grass = new Entity();
+	ob_grass.image = sp_grass;
+	ob_grass.position.set(32 * (0 % 32), 32 * ((0/32) | 0));
+	ob_grass.draw = function () {
+		for (var x = 0; x <= canvas.width; x+=32) {
+			for(var y = 0; y <= canvas.height; y+=32){
+				context.drawImage(this.image, x, y);
+			}
+		}
+	};
+
 
 //Game start
 kernel.init();
